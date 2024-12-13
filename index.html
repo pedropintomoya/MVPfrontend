@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MVP</title>
+</head>
+
+
+
+<body>
+    <header>
+        <div class="title">
+            <h1>Produtores e Soluções</h1>
+        </div> 
+    </header>
+
+    <div class="titulo">
+        <h3>Registro de pessoal</h3>
+    </div>
+
+
+    <div id="tabPostRegistro" class="tabs">
+        <!-- Navegação da aba -->
+        <div class="tabNavPost current" style="border-radius: 15px 0px 0px 0px;">Produtores</div>
+        <div class="tabNavPost">Fornecedores</div>
+        <div class="tabNavPost" style="border-radius: 0px 15px 0px 0px;">Eventos</div>
+  
+        <!-- Conteudos de cada aba -->
+
+        <!-- Inputs para registro de produtores no banco de dados -->
+        <div id="postProdutores" class="tabContPost current">
+            <input class="input" type="text" id="newProdutor" placeholder="Nome">
+            <input class="input" type="text" id="newNumero" placeholder="Numero de telefone">
+            <input class="input" type="text" id="newCPF" placeholder="CPF">
+            <input class="input" type="text" id="newFuncao" placeholder="Função">
+            <input class="input" type="text" id="newSalario" placeholder="Salario">
+            <input class="input" type="text" id="newEmail" placeholder="Email">
+            <input class="input" type="text" id="newCurriculum" placeholder="Curriculum">
+            <button onclick="newItemProdutor()" class="addBtn">Adicionar</button>
+        </div>
+         <!-- Inputs para registro de fornecedores no banco de dados -->
+        <div id="postFornecedores" class="tabContPost">
+            <input class="input" type="text" id="newFornecedor" placeholder="Nome">
+            <input class="input" type="text" id="newRGFornecedor" placeholder="RG da empresa">
+            <input class="input" type="text" id="newNumeroFornecedor" placeholder="Numero de telefone">
+            <input class="input" type="text" id="newServicoFornecedor" placeholder="Serviço">
+            <input class="input" type="text" id="newEmailFornecedor" placeholder="Email">
+            <input class="input" type="text" id="newSiteFornecedor" placeholder="Site da empresa">
+            <button onclick="newItemFornecedor()" class="addBtn">Adicionar</button>
+        </div>
+        <!-- Inputs para registro de eventos no banco de dados -->
+        <div id="postEventos" class="tabContPost">
+            <input class="input" type="text" id="newEvento" placeholder="Nome">
+            <input class="input" type="text" id="newClientevento" placeholder="Responsavel">
+            <input class="input" type="text" id="newDataEvento" placeholder="Data do evento">
+            <input class="input" type="text" id="newTamanhoEvento" placeholder="Porte do evento">
+            <input class="input" type="text" id="newNumeroEvento" placeholder="Numero de contato">
+            <input class="input" type="text" id="newEmailEvento" placeholder="Email de contato">
+            <button onclick="newItemEvento()" class="addBtn">Adicionar</button>
+        </div>
+    </div>
+
+
+
+
+       
+    <div class="titulo">
+        <h3>Clientes registrados</h3>
+    </div>
+    <div id="tabShowReg" class="tabs2">
+        <!-- Navegação da aba -->
+        <div class="tabNavShow current" style="border-radius: 15px 0px 0px 0px;">Produtores</div>
+        <div class="tabNavShow">Fornecedores</div>
+        <div class="tabNavShow" style="border-radius: 0px 15px 0px 0px;">Eventos</div>
+  
+        <!-- Conteudos de cada aba -->
+
+        <!-- Tabela de todos os produtores presente no banco de dados atualmente -->
+        <div class="tabContShow current">
+            <input class="tableFilterProdutor" type="text" id="filterProdutor" onkeyup="tableFilterProdutor()" placeholder="Filtre por produtores...">
+            <table class="table" id="tableProdutor">
+                <tr>
+                    <th>Nome</th>
+                    <th>Numero de contato</th>
+                    <th>CPF</th>
+                    <th>Função</th>
+                    <th>Salario</th>
+                    <th>Email</th>
+                    <th>Curriculum</th>
+                    <th>X</th>
+                </tr>
+            </table>
+        </div>
+        <!-- Tabela de todos os fornecedores presente no banco de dados atualmente -->
+        <div class="tabContShow">
+            <input class="tableFilterFornecedor" type="text" id="filterFornecedor" onkeyup="tableFilterFornecedor()" placeholder="Filtre por fornecedores...">
+            <table id="tableFornecedor">
+                <tr>
+                    <th>Nome</th>
+                    <th>RG da empresa</th>
+                    <th>Numero de contato</th>
+                    <th>Servico prestado</th>
+                    <th>Email</th>
+                    <th>Site</th>
+                    <th>X</th>
+                </tr>
+            </table>
+        </div>
+        <!-- Tabela de todos os eventos presente no banco de dados atualmente -->
+        <div class="tabContShow">
+            <input class="tableFilterEvento" type="text" id="filterEvento" onkeyup="tableFilterEvento()" placeholder="Filtre por eventos...">
+            <table id="tableEvento">
+                <tr>
+                    <th>Nome</th>
+                    <th>Responsavel</th>
+                    <th>Data do evento</th>
+                    <th>Prorte do evento</th>
+                    <th>Numero de contato</th>
+                    <th>Email</th>
+                    <th>X</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="tables.js"></script>
+    <script src="scriptsProdutores.js"></script>
+    <script src="scriptsFornecedor.js"></script>
+    <script src="scriptsEventos.js"></script>
+
+</body>
+</html>

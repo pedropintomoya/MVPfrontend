@@ -1,0 +1,148 @@
+body,
+ul,
+li {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(147,112,219);
+}
+header{
+    background-color: rgb(147,112,219);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+
+/*Areas de input para novos registros*/
+.newItemProdutor{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.input{
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+/*Filtros de cada tabela*/
+.tableFilterProdutor{
+    display: block;
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    margin: auto;
+    font-size: 16px;
+    padding: 12px 705px 12px 4px;
+    border: 1px solid #ddd;
+}
+.tableFilterFornecedor{
+    display: block;
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    margin: auto;
+    font-size: 16px;
+    padding: 12px 705px 12px 4px;
+    border: 1px solid #ddd;
+}
+.tableFilterEvento{
+    display: block;
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    margin: auto;
+    font-size: 16px;
+    padding: 12px 705px 12px 4px;
+    border: 1px solid #ddd;
+}
+
+/*Botão de adicionar dados no BD*/
+.addBtn {
+    padding: 0px 45px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+/*Tabela que mostra os dados presentes no BD*/
+table,
+th,
+td {
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    padding: 8px 6px 10px 5px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-align: center;
+}
+td{
+    word-break: break-all;
+}
+
+
+/*Abas de navegação*/
+.tabs {
+    display: flex; flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+}
+.tabNavPost {
+    flex-grow: 1; 
+    text-align: center;
+    padding: 10px; cursor: pointer;
+    background: #f7f7f7;
+}
+.tabNavPost.current {
+    font-weight: 700;
+    color: #fff;
+    background: #A799B7;
+}
+.tabs2 {
+    display: flex; flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+}
+.tabNavShow {
+    flex-grow: 1; 
+    text-align: center;
+    padding: 10px; cursor: pointer;
+    background: #FFF8E8;
+}
+.tabNavShow.current {
+    font-weight: 700;
+    color: #fff;
+    background: #A799B7;
+}
+
+/*Abas de conteudo*/
+.tabContPost {
+    /*width: 100%; padding: 30px 20px;*/
+    background: #ffffff;
+    display: none;
+    border-radius: 0px 0px 15px 15px;
+}
+.tabContPost.current { 
+    display: block; 
+}
+.tabContShow {
+    width: 100%; 
+    background: #ffffff;
+    display: none;
+}
+.tabContShow.current { 
+    display: block;
+}
+  
+/*titulo das abas de registro*/
+.titulo{
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
